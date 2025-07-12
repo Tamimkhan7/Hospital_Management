@@ -1,0 +1,11 @@
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\bin\Debug\net8.0\Hospital.ViewModels.deps.json
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\bin\Debug\net8.0\Hospital.ViewModels.dll
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\bin\Debug\net8.0\Hospital.ViewModels.pdb
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\obj\Debug\net8.0\Hospital.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\obj\Debug\net8.0\Hospital.ViewModels.AssemblyInfoInputs.cache
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\obj\Debug\net8.0\Hospital.ViewModels.AssemblyInfo.cs
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\obj\Debug\net8.0\Hospital.ViewModels.csproj.CoreCompileInputs.cache
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\obj\Debug\net8.0\Hospital.ViewModels.dll
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\obj\Debug\net8.0\refint\Hospital.ViewModels.dll
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\obj\Debug\net8.0\Hospital.ViewModels.pdb
+D:\BulkyWebTamim\HospitalManagement\Hospital.ViewModels\obj\Debug\net8.0\ref\Hospital.ViewModels.dll

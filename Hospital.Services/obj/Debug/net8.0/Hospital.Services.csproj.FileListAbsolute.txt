@@ -1,0 +1,11 @@
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\bin\Debug\net8.0\Hospital.Services.deps.json
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\bin\Debug\net8.0\Hospital.Services.dll
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\bin\Debug\net8.0\Hospital.Services.pdb
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\obj\Debug\net8.0\Hospital.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\obj\Debug\net8.0\Hospital.Services.AssemblyInfoInputs.cache
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\obj\Debug\net8.0\Hospital.Services.AssemblyInfo.cs
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\obj\Debug\net8.0\Hospital.Services.csproj.CoreCompileInputs.cache
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\obj\Debug\net8.0\Hospital.Services.dll
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\obj\Debug\net8.0\refint\Hospital.Services.dll
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\obj\Debug\net8.0\Hospital.Services.pdb
+D:\BulkyWebTamim\HospitalManagement\Hospital.Services\obj\Debug\net8.0\ref\Hospital.Services.dll

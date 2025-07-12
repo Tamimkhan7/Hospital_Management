@@ -1,0 +1,473 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BulkyWebTamim\\HospitalManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\insurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\insurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\testprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\testprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\lab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\lab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\patientreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\patientreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\prescribedmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\prescribedmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\medicinereport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\medicinereport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\payroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\payroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{876B9117-E6B1-4363-9124-6ED6ED017486}|HospitalManagement\\HospitalManagement.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospitalmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{876B9117-E6B1-4363-9124-6ED6ED017486}|HospitalManagement\\HospitalManagement.csproj|solutionrelative:hospitalmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEB33CE6-1D84-45B9-B802-8C7DC3FD8265}|Hospital.ViewModels\\Hospital.ViewModels.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.viewmodels\\hospital.viewmodels.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CEB33CE6-1D84-45B9-B802-8C7DC3FD8265}|Hospital.ViewModels\\Hospital.ViewModels.csproj|solutionrelative:hospital.viewmodels\\hospital.viewmodels.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A800C224-6834-424C-9FA4-7F07E381E60F}|Hospital.Utilities\\Hospital.Utilities.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.utilities\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A800C224-6834-424C-9FA4-7F07E381E60F}|Hospital.Utilities\\Hospital.Utilities.csproj|solutionrelative:hospital.utilities\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{876B9117-E6B1-4363-9124-6ED6ED017486}|HospitalManagement\\HospitalManagement.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospitalmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{876B9117-E6B1-4363-9124-6ED6ED017486}|HospitalManagement\\HospitalManagement.csproj|solutionrelative:hospitalmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{876B9117-E6B1-4363-9124-6ED6ED017486}|HospitalManagement\\HospitalManagement.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospitalmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{876B9117-E6B1-4363-9124-6ED6ED017486}|HospitalManagement\\HospitalManagement.csproj|solutionrelative:hospitalmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F72791-0AB3-4C9B-91B9-620897204593}|Hospital.Repositories\\Hospital.Repositories.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.repositories\\migrations\\20250712172358_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4F72791-0AB3-4C9B-91B9-620897204593}|Hospital.Repositories\\Hospital.Repositories.csproj|solutionrelative:hospital.repositories\\migrations\\20250712172358_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.model\\hospital.model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5FB07E84-E81D-4EBA-9B67-3A95106DB990}|Hospital.Model\\Hospital.Model.csproj|solutionrelative:hospital.model\\hospital.model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A800C224-6834-424C-9FA4-7F07E381E60F}|Hospital.Utilities\\Hospital.Utilities.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.utilities\\hospital.utilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A800C224-6834-424C-9FA4-7F07E381E60F}|Hospital.Utilities\\Hospital.Utilities.csproj|solutionrelative:hospital.utilities\\hospital.utilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F72791-0AB3-4C9B-91B9-620897204593}|Hospital.Repositories\\Hospital.Repositories.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.repositories\\hospital.repositories.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A4F72791-0AB3-4C9B-91B9-620897204593}|Hospital.Repositories\\Hospital.Repositories.csproj|solutionrelative:hospital.repositories\\hospital.repositories.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{876B9117-E6B1-4363-9124-6ED6ED017486}|HospitalManagement\\HospitalManagement.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospitalmanagement\\hospitalmanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{876B9117-E6B1-4363-9124-6ED6ED017486}|HospitalManagement\\HospitalManagement.csproj|solutionrelative:hospitalmanagement\\hospitalmanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724AE59F-2F6E-4206-B17D-E49CE698424D}|Hospital.Services\\Hospital.Services.csproj|d:\\bulkywebtamim\\hospitalmanagement\\hospital.services\\hospital.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{724AE59F-2F6E-4206-B17D-E49CE698424D}|Hospital.Services\\Hospital.Services.csproj|solutionrelative:hospital.services\\hospital.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Insurance.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Insurance.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Insurance.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Insurance.cs",
+              "RelativeToolTip": "Hospital.Model\\Insurance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T20:07:49.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Bill.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Bill.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Bill.cs",
+              "RelativeToolTip": "Hospital.Model\\Bill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T20:02:16.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestPrice.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\TestPrice.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\TestPrice.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\TestPrice.cs",
+              "RelativeToolTip": "Hospital.Model\\TestPrice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T20:00:04.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Lab.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Lab.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Lab.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Lab.cs",
+              "RelativeToolTip": "Hospital.Model\\Lab.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:56:07.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatientReport.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\PatientReport.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\PatientReport.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\PatientReport.cs",
+              "RelativeToolTip": "Hospital.Model\\PatientReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:51:21.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PrescribedMedicine.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\PrescribedMedicine.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\PrescribedMedicine.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\PrescribedMedicine.cs",
+              "RelativeToolTip": "Hospital.Model\\PrescribedMedicine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:46:14.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Medicine.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Medicine.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Medicine.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Medicine.cs",
+              "RelativeToolTip": "Hospital.Model\\Medicine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:41:39.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MedicineReport.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\MedicineReport.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\MedicineReport.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\MedicineReport.cs",
+              "RelativeToolTip": "Hospital.Model\\MedicineReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:36:43.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Supplier.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Supplier.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Supplier.cs",
+              "RelativeToolTip": "Hospital.Model\\Supplier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:33:16.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Room.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Room.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Room.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Room.cs",
+              "RelativeToolTip": "Hospital.Model\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:06:30.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Hospital.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Hospital.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Hospital.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Hospital.cs",
+              "RelativeToolTip": "Hospital.Model\\Hospital.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:02:37.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\ApplicationUser.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\ApplicationUser.cs",
+              "RelativeToolTip": "Hospital.Model\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T18:44:21.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Utilities\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Hospital.Utilities\\EmailSender.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Utilities\\EmailSender.cs",
+              "RelativeToolTip": "Hospital.Utilities\\EmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T17:44:56.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\HospitalManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagement\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\HospitalManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HospitalManagement\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-12T17:41:52.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20250712172358_initial.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Repositories\\Migrations\\20250712172358_initial.cs",
+              "RelativeDocumentMoniker": "Hospital.Repositories\\Migrations\\20250712172358_initial.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Repositories\\Migrations\\20250712172358_initial.cs",
+              "RelativeToolTip": "Hospital.Repositories\\Migrations\\20250712172358_initial.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAQwIYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T17:23:59.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Hospital.Repositories.csproj",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Repositories\\Hospital.Repositories.csproj",
+              "RelativeDocumentMoniker": "Hospital.Repositories\\Hospital.Repositories.csproj",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Repositories\\Hospital.Repositories.csproj",
+              "RelativeToolTip": "Hospital.Repositories\\Hospital.Repositories.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-12T17:16:40.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Hospital.Utilities.csproj",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Utilities\\Hospital.Utilities.csproj",
+              "RelativeDocumentMoniker": "Hospital.Utilities\\Hospital.Utilities.csproj",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Utilities\\Hospital.Utilities.csproj",
+              "RelativeToolTip": "Hospital.Utilities\\Hospital.Utilities.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-12T17:20:38.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\HospitalManagement\\Program.cs",
+              "RelativeDocumentMoniker": "HospitalManagement\\Program.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\HospitalManagement\\Program.cs",
+              "RelativeToolTip": "HospitalManagement\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T17:24:49.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Payroll.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Payroll.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Payroll.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Payroll.cs",
+              "RelativeToolTip": "Hospital.Model\\Payroll.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:28:39.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Contact.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Contact.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Contact.cs",
+              "RelativeToolTip": "Hospital.Model\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:08:43.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Appointment.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Appointment.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Appointment.cs",
+              "RelativeToolTip": "Hospital.Model\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:17:50.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Department.cs",
+              "RelativeDocumentMoniker": "Hospital.Model\\Department.cs",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Department.cs",
+              "RelativeToolTip": "Hospital.Model\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:23:33.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Hospital.ViewModels.csproj",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.ViewModels\\Hospital.ViewModels.csproj",
+              "RelativeDocumentMoniker": "Hospital.ViewModels\\Hospital.ViewModels.csproj",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.ViewModels\\Hospital.ViewModels.csproj",
+              "RelativeToolTip": "Hospital.ViewModels\\Hospital.ViewModels.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-12T17:20:56.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\HospitalManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "HospitalManagement\\appsettings.json",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\HospitalManagement\\appsettings.json",
+              "RelativeToolTip": "HospitalManagement\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-12T17:24:32.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Hospital.Model.csproj",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Hospital.Model.csproj",
+              "RelativeDocumentMoniker": "Hospital.Model\\Hospital.Model.csproj",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Model\\Hospital.Model.csproj",
+              "RelativeToolTip": "Hospital.Model\\Hospital.Model.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-12T17:22:11.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HospitalManagement.csproj",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\HospitalManagement\\HospitalManagement.csproj",
+              "RelativeDocumentMoniker": "HospitalManagement\\HospitalManagement.csproj",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\HospitalManagement\\HospitalManagement.csproj",
+              "RelativeToolTip": "HospitalManagement\\HospitalManagement.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-12T17:20:58.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Hospital.Services.csproj",
+              "DocumentMoniker": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Services\\Hospital.Services.csproj",
+              "RelativeDocumentMoniker": "Hospital.Services\\Hospital.Services.csproj",
+              "ToolTip": "D:\\BulkyWebTamim\\HospitalManagement\\Hospital.Services\\Hospital.Services.csproj",
+              "RelativeToolTip": "Hospital.Services\\Hospital.Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-12T17:20:36.913Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

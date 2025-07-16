@@ -17,7 +17,7 @@ namespace Hospital.Repositories.Interfaces
 
         T GetById(object id);
         Task<T> GetByIdAsync(Object id);
-        void add(T entity);
+        void Add(T entity);
         Task<T> AddAsync(T entity);
         void Update(T entity);
         Task<T> UpdateAsync(T entity);

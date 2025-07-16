@@ -44,6 +44,10 @@ namespace Hospital.Repositories.Implementation
             _context.SaveChanges();
         }
 
+        public object GenericRepository<T>()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

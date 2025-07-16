@@ -19,7 +19,7 @@ namespace Hospital.Repositories.Implementation
             dbset = _context.Set<T>();
         }
 
-        public void add(T entity)
+        public void Add(T entity)
         {
             dbset.Add(entity);
         }

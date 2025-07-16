@@ -15,3 +15,4 @@ D:\BulkyWebTamim\HospitalManagement\Hospital.Repositories\bin\Debug\net8.0\Hospi
 D:\BulkyWebTamim\HospitalManagement\Hospital.Repositories\obj\Debug\net8.0\Hospital.043409E1.Up2Date
 D:\BulkyWebTamim\HospitalManagement\Hospital.Repositories\bin\Debug\net8.0\Hospital.Repositories.runtimeconfig.json
 D:\BulkyWebTamim\HospitalManagement\Hospital.Repositories\obj\Debug\net8.0\Hospital.Repositories.genruntimeconfig.cache
+D:\BulkyWebTamim\HospitalManagement\Hospital.Repositories\obj\Debug\net8.0\Hospital.Repositories.sourcelink.json

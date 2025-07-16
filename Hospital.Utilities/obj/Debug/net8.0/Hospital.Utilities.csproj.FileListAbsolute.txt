@@ -15,3 +15,4 @@ D:\BulkyWebTamim\HospitalManagement\Hospital.Utilities\obj\Debug\net8.0\Hospital
 D:\BulkyWebTamim\HospitalManagement\Hospital.Utilities\obj\Debug\net8.0\refint\Hospital.Utilities.dll
 D:\BulkyWebTamim\HospitalManagement\Hospital.Utilities\obj\Debug\net8.0\Hospital.Utilities.pdb
 D:\BulkyWebTamim\HospitalManagement\Hospital.Utilities\obj\Debug\net8.0\ref\Hospital.Utilities.dll
+D:\BulkyWebTamim\HospitalManagement\Hospital.Utilities\obj\Debug\net8.0\Hospital.Utilities.sourcelink.json

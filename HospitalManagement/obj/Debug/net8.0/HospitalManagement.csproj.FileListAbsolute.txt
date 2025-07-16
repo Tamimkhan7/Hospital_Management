@@ -267,3 +267,4 @@ D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Hospital
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.MvcApplicationPartsAssemblyInfo.cs
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Hospital.Utilities.dll
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Hospital.Utilities.pdb
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.sourcelink.json

@@ -6,22 +6,28 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Hospital.Repositories.Migrations
 {
     /// <inheritdoc />
-    public partial class ModelToDb : Migration
+    public partial class FixCascadeIssue : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropColumn(
+                name: "Discriminator",
+                table: "AspNetUsers");
+
             migrationBuilder.AddColumn<string>(
                 name: "Address",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: true);
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DOB",
                 table: "AspNetUsers",
                 type: "datetime2",
-                nullable: true);
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<int>(
                 name: "DepartmentId",
@@ -33,25 +39,29 @@ namespace Hospital.Repositories.Migrations
                 name: "Gender",
                 table: "AspNetUsers",
                 type: "int",
-                nullable: true);
+                nullable: false,
+                defaultValue: 0);
 
             migrationBuilder.AddColumn<string>(
                 name: "Name",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: true);
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "Nationality",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: true);
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "Specialist",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: true);
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.CreateTable(
                 name: "Appointments",
@@ -63,8 +73,8 @@ namespace Hospital.Repositories.Migrations
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -73,12 +83,14 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_Appointments_AspNetUsers_DoctorId",
                         column: x => x.DoctorId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Appointments_AspNetUsers_PatientId",
                         column: x => x.PatientId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -134,7 +146,7 @@ namespace Hospital.Repositories.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     LabNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TestType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TestCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Weight = table.Column<int>(type: "int", nullable: false),
@@ -150,7 +162,8 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_Labs_AspNetUsers_PatientId",
                         column: x => x.PatientId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -170,7 +183,7 @@ namespace Hospital.Repositories.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PatientReport",
+                name: "PatientReports",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -181,19 +194,19 @@ namespace Hospital.Repositories.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PatientReport", x => x.Id);
+                    table.PrimaryKey("PK_PatientReports", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PatientReport_AspNetUsers_DoctorId",
+                        name: "FK_PatientReports_AspNetUsers_DoctorId",
                         column: x => x.DoctorId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PatientReport_AspNetUsers_PatientId",
+                        name: "FK_PatientReports_AspNetUsers_PatientId",
                         column: x => x.PatientId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -202,7 +215,7 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    EmployeeIdId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    EmployeeIdId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     NetSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     HourlySalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -217,7 +230,8 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_Payrolls_AspNetUsers_EmployeeIdId",
                         column: x => x.EmployeeIdId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -286,7 +300,7 @@ namespace Hospital.Repositories.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     BillNumber = table.Column<int>(type: "int", nullable: false),
-                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     InsuranceId = table.Column<int>(type: "int", nullable: false),
                     DoctorCharge = table.Column<int>(type: "int", nullable: false),
                     MedicineCharge = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -305,7 +319,8 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_Bills_AspNetUsers_PatientId",
                         column: x => x.PatientId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Bills_Insurances_InsuranceId",
                         column: x => x.InsuranceId,
@@ -333,9 +348,9 @@ namespace Hospital.Repositories.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PrescribedMedicines_PatientReport_PatientReportId",
+                        name: "FK_PrescribedMedicines_PatientReports_PatientReportId",
                         column: x => x.PatientReportId,
-                        principalTable: "PatientReport",
+                        principalTable: "PatientReports",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -377,10 +392,10 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TestCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     LabId = table.Column<int>(type: "int", nullable: false),
-                    BillId = table.Column<int>(type: "int", nullable: false)
+                    BillId = table.Column<int>(type: "int", nullable: false),
+                    TestCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -390,13 +405,13 @@ namespace Hospital.Repositories.Migrations
                         column: x => x.BillId,
                         principalTable: "Bills",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_TestPrices_Labs_LabId",
                         column: x => x.LabId,
                         principalTable: "Labs",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -445,13 +460,13 @@ namespace Hospital.Repositories.Migrations
                 column: "SupplierId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PatientReport_DoctorId",
-                table: "PatientReport",
+                name: "IX_PatientReports_DoctorId",
+                table: "PatientReports",
                 column: "DoctorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PatientReport_PatientId",
-                table: "PatientReport",
+                name: "IX_PatientReports_PatientId",
+                table: "PatientReports",
                 column: "PatientId");
 
             migrationBuilder.CreateIndex(
@@ -489,8 +504,7 @@ namespace Hospital.Repositories.Migrations
                 table: "AspNetUsers",
                 column: "DepartmentId",
                 principalTable: "Departments",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                principalColumn: "Id");
         }
 
         /// <inheritdoc />
@@ -531,7 +545,7 @@ namespace Hospital.Repositories.Migrations
                 name: "Medicines");
 
             migrationBuilder.DropTable(
-                name: "PatientReport");
+                name: "PatientReports");
 
             migrationBuilder.DropTable(
                 name: "HospitalInfos");
@@ -576,6 +590,14 @@ namespace Hospital.Repositories.Migrations
             migrationBuilder.DropColumn(
                 name: "Specialist",
                 table: "AspNetUsers");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Discriminator",
+                table: "AspNetUsers",
+                type: "nvarchar(21)",
+                maxLength: 21,
+                nullable: false,
+                defaultValue: "");
         }
     }
 }

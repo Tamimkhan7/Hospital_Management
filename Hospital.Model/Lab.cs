@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Hospital.Model
 {
@@ -18,5 +14,7 @@ namespace Hospital.Model
         public int BloodPressure { get; set; }
         public int Temperature { get; set; }
         public string TestResult { get; set; }
+
+        public ICollection<TestPrice> TestPrices { get; set; }
     }
 }

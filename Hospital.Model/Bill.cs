@@ -16,5 +16,6 @@
         public decimal Advance { get; set; }
         public decimal TotalBill { get; set; }
 
+        public ICollection<TestPrice> TestPrices { get; set; }
     }
 }

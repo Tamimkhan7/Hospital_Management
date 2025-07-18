@@ -2,7 +2,6 @@
 using Hospital.Repositories.Interfaces;
 using Hospital.Utilities;
 using Hospital.ViewModels;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -31,18 +30,15 @@ namespace Hospital.Services
         public PagedResult<RoomViewModel> GetAll(int pageNumber, int pageSize)
         {
             var repo = _unitOfWork.GetRepository<Room>();
-
             int totalCount = repo.GetAll().Count();
-
             int skip = (pageNumber - 1) * pageSize;
-            var modelList = repo.GetAll()
+
+            var modelList = repo.GetAll(includeProperries: "Hospital")
                                 .Skip(skip)
                                 .Take(pageSize)
                                 .ToList();
 
-            var vmList = modelList
-                         .Select(x => new RoomViewModel(x))
-                         .ToList();
+            var vmList = modelList.Select(x => new RoomViewModel(x)).ToList();
 
             return new PagedResult<RoomViewModel>
             {
@@ -72,8 +68,8 @@ namespace Hospital.Services
         {
             var repo = _unitOfWork.GetRepository<Room>();
             var updated = new RoomViewModel().ConvertViewModel(room);
-
             var existing = repo.GetById(updated.Id);
+
             if (existing != null)
             {
                 existing.RoomNumber = updated.RoomNumber;

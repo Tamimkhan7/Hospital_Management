@@ -2208,7 +2208,8 @@
       "Hospital.Services/1.0.0": {
         "dependencies": {
           "Hospital.Utilities": "1.0.0",
-          "Hospital.ViewModels": "1.0.0"
+          "Hospital.ViewModels": "1.0.0",
+          "cloudscribe.Web.Pagination": "8.0.0"
         },
         "runtime": {
           "Hospital.Services.dll": {

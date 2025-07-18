@@ -116,5 +116,10 @@ namespace Hospital.Repositories.Implementation
                 this.disposed = true;
             }
         }
+
+        public object GetAll(string includeProperties)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

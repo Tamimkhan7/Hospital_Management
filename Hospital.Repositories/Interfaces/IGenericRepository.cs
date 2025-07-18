@@ -23,6 +23,6 @@ namespace Hospital.Repositories.Interfaces
         Task<T> UpdateAsync(T entity);
         void Delete(T entity);
         Task<T>DeleteAsync(T entity);
-
+        object GetAll(string includeProperties);
     }
 }

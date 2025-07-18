@@ -3232,7 +3232,8 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Hospital.Utilities": "1.0.0",
-          "Hospital.ViewModels": "1.0.0"
+          "Hospital.ViewModels": "1.0.0",
+          "cloudscribe.Web.Pagination": "8.0.0"
         },
         "compile": {
           "bin/placeholder/Hospital.Services.dll": {}

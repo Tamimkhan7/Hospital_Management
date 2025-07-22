@@ -1,60 +1,61 @@
 ﻿using Hospital.Model;
-using Hospital.Repositories;
+using Hospital.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 
-namespace Hospital.Utilities
+namespace Hospital.Repositories.Implementation
 {
     public class DbInitializer : IDbInitializer
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly ApplicationDbContext _db;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly ApplicationDbContext _context;
 
-        public DbInitializer(UserManager<IdentityUser> userManager,
-                             RoleManager<IdentityRole> roleManager,
-                             ApplicationDbContext context)
+        public DbInitializer(
+            ApplicationDbContext db,
+            UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager)
         {
+            _db = db;
             _userManager = userManager;
             _roleManager = roleManager;
-            _context = context;
         }
 
         public void Initialize()
         {
             try
             {
-                if (_context.Database.GetPendingMigrations().Any())
+                if (_db.Database.GetPendingMigrations().Count() > 0)
                 {
-                    _context.Database.Migrate();
+                    _db.Database.Migrate();
                 }
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Migration failed!", ex);
-            }
+            catch (Exception) { }
 
+            // Create Roles
             if (!_roleManager.RoleExistsAsync(WebSiteRoles.WebSite_Admin).GetAwaiter().GetResult())
             {
                 _roleManager.CreateAsync(new IdentityRole(WebSiteRoles.WebSite_Admin)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(WebSiteRoles.WebSite_Patient)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(WebSiteRoles.WebSite_Doctor)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(WebSiteRoles.WebSite_Patient)).GetAwaiter().GetResult();
 
-                var adminUser = new ApplicationUser
+                // Create Admin User
+                _userManager.CreateAsync(new ApplicationUser
                 {
-                    UserName = "Harkesh",
-                    Email = "harkesh@xyz.com",
+                    UserName = "admin@hospital.com",
+                    Email = "admin@hospital.com",
+                    Name = "Admin",
                     EmailConfirmed = true
-                };
+                }, "Admin@123").GetAwaiter().GetResult();
 
-                var result = _userManager.CreateAsync(adminUser, "Harkesh@123").GetAwaiter().GetResult();
-                if (result.Succeeded)
-                {
-                    _userManager.AddToRoleAsync(adminUser, WebSiteRoles.WebSite_Admin).GetAwaiter().GetResult();
-                }
+                var user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "admin@hospital.com");
+
+                _userManager.AddToRoleAsync(user, WebSiteRoles.WebSite_Admin).GetAwaiter().GetResult();
             }
+
+            return;
         }
     }
 }

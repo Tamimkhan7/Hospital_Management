@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hospital.Model
 {
@@ -14,16 +15,19 @@ namespace Hospital.Model
         public string Specialist { get; set; }
         public bool IsDoctor { get; set; }
 
-        public int? DepartmentId { get; set; }
+         public string PictureUri { get; set; }
         public Department Department { get; set; }
-
-        public ICollection<Appointment> DoctorAppointments { get; set; } 
-
-        public ICollection<Appointment> PatientAppointments { get; set; } 
+        [NotMapped]
+        public ICollection<Appointment> DoctorAppointments { get; set; }
+        [NotMapped]
+        public ICollection<Payroll> Payrolls { get; set; }
+        [NotMapped]
+        public ICollection<Appointment> PatientAppointments { get; set; }
+        [NotMapped]
         public ICollection<PatientReport> PatientReportsAsDoctor { get; set; }
-
+        [NotMapped]
         public ICollection<PatientReport> PatientReportsAsPatient { get; set; } 
-        public ICollection<Payroll> Payrolls { get; set; } 
+
     }
 
     public enum Gender

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hospital.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250718194733_addDoctorToDb")]
-    partial class addDoctorToDb
+    [Migration("20250720200914_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace Hospital.Repositories.Migrations
                     b.Property<DateTime>("DOB")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("DepartmentId")
+                    b.Property<int>("DepartmentId")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
@@ -90,6 +90,10 @@ namespace Hospital.Repositories.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("PictureUri")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -750,7 +754,9 @@ namespace Hospital.Repositories.Migrations
                 {
                     b.HasOne("Hospital.Model.Department", "Department")
                         .WithMany("Employees")
-                        .HasForeignKey("DepartmentId");
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Department");
                 });
@@ -856,7 +862,7 @@ namespace Hospital.Repositories.Migrations
             modelBuilder.Entity("Hospital.Model.Payroll", b =>
                 {
                     b.HasOne("Hospital.Model.ApplicationUser", "EmployeeId")
-                        .WithMany("Payrolls")
+                        .WithMany()
                         .HasForeignKey("EmployeeIdId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -973,8 +979,6 @@ namespace Hospital.Repositories.Migrations
                     b.Navigation("PatientReportsAsDoctor");
 
                     b.Navigation("PatientReportsAsPatient");
-
-                    b.Navigation("Payrolls");
                 });
 
             modelBuilder.Entity("Hospital.Model.Bill", b =>

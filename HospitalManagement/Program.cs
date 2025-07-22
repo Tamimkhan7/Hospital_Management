@@ -1,4 +1,5 @@
-﻿using Hospital.Repositories;
+﻿using Hospital.Model;
+using Hospital.Repositories;
 using Hospital.Repositories.Implementation;
 using Hospital.Repositories.Interfaces;
 using Hospital.Services;
@@ -11,14 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+//builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+//    .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
-
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
@@ -28,8 +30,8 @@ builder.Services.AddTransient<IRoomService, RoomService>();
 builder.Services.AddTransient<IContactService, ContactService>();
 
 builder.Services.AddRazorPages();
-var app = builder.Build();
 
+var app = builder.Build();
 
 SeedDatabase();
 
@@ -53,7 +55,6 @@ app.MapControllerRoute(
     pattern: "{area=admin}/{controller=Hospitals}/{action=Index}/{id?}");
 
 app.Run();
-
 
 void SeedDatabase()
 {

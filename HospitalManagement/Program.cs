@@ -28,6 +28,7 @@ builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddTransient<IHospitalInfo, HospitalInfoService>();
 builder.Services.AddTransient<IRoomService, RoomService>();
 builder.Services.AddTransient<IContactService, ContactService>();
+builder.Services.AddTransient<IApplicationUserService, ApplicationUserService>();
 
 builder.Services.AddRazorPages();
 
@@ -38,7 +39,7 @@ SeedDatabase();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    app.UseHsts();  
 }
 
 app.UseHttpsRedirection();
@@ -52,7 +53,8 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{area=admin}/{controller=Hospitals}/{action=Index}/{id?}");
+     pattern: "{area=admin}/{controller=Hospitals}/{action=Index}/{id?}");
+    //pattern: "{controller=Home}/{action=Index}");
 
 app.Run();
 

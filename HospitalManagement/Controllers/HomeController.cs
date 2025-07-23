@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalManagement.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

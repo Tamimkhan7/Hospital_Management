@@ -21,7 +21,7 @@
             <th>Gender</th>
             <th>Is Doctor</th>
             <th>Specialist</th>
-            <th>Actions</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -36,9 +36,9 @@
             <td>@Html.DisplayFor(modelItem => item.IsDoctor)</td>
             <td>@Html.DisplayFor(modelItem => item.Specialist)</td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                 @* @Html.ActionLink("Details", "Details", new { id = item.Id }) |  *@
+                 @Html.ActionLink("Delete", "Delete", new { id = item.Id }) 
             </td>
         </tr>
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hospital.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250723121736_Update User")]
-    partial class UpdateUser
+    [Migration("20250727175201_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,25 +34,22 @@ namespace Hospital.Repositories.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DOB")
+                    b.Property<DateTime?>("DOB")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("DepartmentId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -62,10 +59,10 @@ namespace Hospital.Repositories.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Gender")
+                    b.Property<int?>("Gender")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsDoctor")
+                    b.Property<bool?>("IsDoctor")
                         .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
@@ -74,8 +71,10 @@ namespace Hospital.Repositories.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<string>("Mobile")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nationality")
@@ -137,27 +136,22 @@ namespace Hospital.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DoctorId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Number")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PatientId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -177,41 +171,40 @@ namespace Hospital.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal>("Advance")
+                    b.Property<decimal?>("Advance")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("BillNumber")
+                    b.Property<int?>("BillNumber")
                         .HasColumnType("int");
 
-                    b.Property<int>("DoctorCharge")
+                    b.Property<int?>("DoctorCharge")
                         .HasColumnType("int");
 
-                    b.Property<int>("InsuranceId")
+                    b.Property<int?>("InsuranceId")
                         .HasColumnType("int");
 
-                    b.Property<int>("LabCharge")
+                    b.Property<int?>("LabCharge")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("MedicineCharge")
+                    b.Property<decimal?>("MedicineCharge")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("NUrsingCharge")
+                    b.Property<int?>("NUrsingCharge")
                         .HasColumnType("int");
 
-                    b.Property<int>("NoOfDays")
+                    b.Property<int?>("NoOfDays")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("OperationCharge")
+                    b.Property<decimal?>("OperationCharge")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("PatientId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<decimal>("RoomCharge")
+                    b.Property<decimal?>("RoomCharge")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("TotalBill")
+                    b.Property<decimal?>("TotalBill")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
@@ -232,14 +225,12 @@ namespace Hospital.Repositories.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("HospitalId")
                         .HasColumnType("int");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -258,11 +249,9 @@ namespace Hospital.Repositories.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -279,23 +268,18 @@ namespace Hospital.Repositories.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PinCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -312,15 +296,12 @@ namespace Hospital.Repositories.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("EndDate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PolicyNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StartDate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -336,36 +317,31 @@ namespace Hospital.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("BloodPressure")
+                    b.Property<int?>("BloodPressure")
                         .HasColumnType("int");
 
-                    b.Property<int>("Height")
+                    b.Property<int?>("Height")
                         .HasColumnType("int");
 
                     b.Property<string>("LabNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PatientId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Temperature")
+                    b.Property<int?>("Temperature")
                         .HasColumnType("int");
 
                     b.Property<string>("TestCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TestResult")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TestType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Weight")
+                    b.Property<int?>("Weight")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -383,19 +359,16 @@ namespace Hospital.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal>("Cost")
+                    b.Property<decimal?>("Cost")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -412,26 +385,24 @@ namespace Hospital.Repositories.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Company")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ExpireDate")
+                    b.Property<DateTime?>("ExpireDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MedicineId")
+                    b.Property<int?>("MedicineId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("ProductionDate")
+                    b.Property<DateTime?>("ProductionDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Quantity")
+                    b.Property<int?>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("SupplierId")
+                    b.Property<int?>("SupplierId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -452,15 +423,12 @@ namespace Hospital.Repositories.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Diagnose")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DoctorId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("PatientId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -481,26 +449,24 @@ namespace Hospital.Repositories.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AccountNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("BonusSalary")
+                    b.Property<decimal?>("BonusSalary")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Compensation")
+                    b.Property<decimal?>("Compensation")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("EmployeeIdId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<decimal>("HourlySalary")
+                    b.Property<decimal?>("HourlySalary")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("NetSalary")
+                    b.Property<decimal?>("NetSalary")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Salary")
+                    b.Property<decimal?>("Salary")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
@@ -518,10 +484,10 @@ namespace Hospital.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("MedicineId")
+                    b.Property<int?>("MedicineId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PatientReportId")
+                    b.Property<int?>("PatientReportId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -549,11 +515,9 @@ namespace Hospital.Repositories.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -572,19 +536,15 @@ namespace Hospital.Repositories.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Company")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -600,17 +560,16 @@ namespace Hospital.Repositories.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("BillId")
+                    b.Property<int?>("BillId")
                         .HasColumnType("int");
 
-                    b.Property<int>("LabId")
+                    b.Property<int?>("LabId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Price")
+                    b.Property<decimal?>("Price")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TestCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -620,6 +579,48 @@ namespace Hospital.Repositories.Migrations
                     b.HasIndex("LabId");
 
                     b.ToTable("TestPrices");
+                });
+
+            modelBuilder.Entity("Hospital.Model.Timing", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("AfternoonShiftEndTime")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("AfternoonShiftStartTime")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DoctorId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DoctorId1")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MorningShiftEndTime")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MorningShiftStartTime")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId1");
+
+                    b.ToTable("Timing");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -769,14 +770,11 @@ namespace Hospital.Repositories.Migrations
                     b.HasOne("Hospital.Model.ApplicationUser", "Doctor")
                         .WithMany("DoctorAppointments")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Hospital.Model.ApplicationUser", "Patient")
-                        .WithMany("PatientAppointments")
-                        .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("PatientId");
 
                     b.Navigation("Doctor");
 
@@ -787,15 +785,11 @@ namespace Hospital.Repositories.Migrations
                 {
                     b.HasOne("Hospital.Model.Insurance", "Insurance")
                         .WithMany("Bill")
-                        .HasForeignKey("InsuranceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InsuranceId");
 
                     b.HasOne("Hospital.Model.ApplicationUser", "Patient")
                         .WithMany()
-                        .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PatientId");
 
                     b.Navigation("Insurance");
 
@@ -817,9 +811,7 @@ namespace Hospital.Repositories.Migrations
                 {
                     b.HasOne("Hospital.Model.ApplicationUser", "Patient")
                         .WithMany()
-                        .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PatientId");
 
                     b.Navigation("Patient");
                 });
@@ -828,15 +820,11 @@ namespace Hospital.Repositories.Migrations
                 {
                     b.HasOne("Hospital.Model.Medicine", "Medicine")
                         .WithMany("MedicineReport")
-                        .HasForeignKey("MedicineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MedicineId");
 
                     b.HasOne("Hospital.Model.Supplier", "Supplier")
                         .WithMany("MedicineReport")
-                        .HasForeignKey("SupplierId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SupplierId");
 
                     b.Navigation("Medicine");
 
@@ -848,14 +836,12 @@ namespace Hospital.Repositories.Migrations
                     b.HasOne("Hospital.Model.ApplicationUser", "Doctor")
                         .WithMany("PatientReportsAsDoctor")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Hospital.Model.ApplicationUser", "Patient")
                         .WithMany("PatientReportsAsPatient")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Doctor");
 
@@ -866,9 +852,7 @@ namespace Hospital.Repositories.Migrations
                 {
                     b.HasOne("Hospital.Model.ApplicationUser", "EmployeeId")
                         .WithMany()
-                        .HasForeignKey("EmployeeIdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EmployeeIdId");
 
                     b.Navigation("EmployeeId");
                 });
@@ -877,15 +861,11 @@ namespace Hospital.Repositories.Migrations
                 {
                     b.HasOne("Hospital.Model.Medicine", "Medicine")
                         .WithMany("PrescribedMedicine")
-                        .HasForeignKey("MedicineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MedicineId");
 
                     b.HasOne("Hospital.Model.PatientReport", "PatientReport")
                         .WithMany("PrescribedMedicine")
-                        .HasForeignKey("PatientReportId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PatientReportId");
 
                     b.Navigation("Medicine");
 
@@ -908,18 +888,25 @@ namespace Hospital.Repositories.Migrations
                     b.HasOne("Hospital.Model.Bill", "Bill")
                         .WithMany("TestPrices")
                         .HasForeignKey("BillId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Hospital.Model.Lab", "Lab")
                         .WithMany("TestPrices")
                         .HasForeignKey("LabId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Bill");
 
                     b.Navigation("Lab");
+                });
+
+            modelBuilder.Entity("Hospital.Model.Timing", b =>
+                {
+                    b.HasOne("Hospital.Model.ApplicationUser", "Doctor")
+                        .WithMany()
+                        .HasForeignKey("DoctorId1");
+
+                    b.Navigation("Doctor");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -976,8 +963,6 @@ namespace Hospital.Repositories.Migrations
             modelBuilder.Entity("Hospital.Model.ApplicationUser", b =>
                 {
                     b.Navigation("DoctorAppointments");
-
-                    b.Navigation("PatientAppointments");
 
                     b.Navigation("PatientReportsAsDoctor");
 

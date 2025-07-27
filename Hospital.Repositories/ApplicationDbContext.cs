@@ -26,6 +26,7 @@ namespace Hospital.Repositories
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<TestPrice> TestPrices { get; set; }
         public DbSet<PatientReport> PatientReports { get; set; }
+        public DbSet<Timing> Timing { get; set; }  
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -52,11 +53,11 @@ namespace Hospital.Repositories
                 .HasForeignKey(a => a.DoctorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<Appointment>()
-                .HasOne(a => a.Patient)
-                .WithMany(u => u.PatientAppointments)
-                .HasForeignKey(a => a.PatientId)
-                .OnDelete(DeleteBehavior.Restrict);
+            //builder.Entity<Appointment>()
+            //    .HasOne(a => a.Patient)
+            //    .WithMany(u => u.PatientAppointments)
+            //    .HasForeignKey(a => a.PatientId)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
             // PatientReport ↔ ApplicationUser relations:
             builder.Entity<PatientReport>()
@@ -64,12 +65,13 @@ namespace Hospital.Repositories
                 .WithMany(u => u.PatientReportsAsDoctor)
                 .HasForeignKey(pr => pr.DoctorId)
                 .OnDelete(DeleteBehavior.Restrict);
+
             builder.Entity<PatientReport>()
                 .HasOne(pr => pr.Patient)
                 .WithMany(u => u.PatientReportsAsPatient)
                 .HasForeignKey(pr => pr.PatientId)
                 .OnDelete(DeleteBehavior.Restrict);
-
+           
         }
     }
 }

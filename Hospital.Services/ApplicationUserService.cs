@@ -63,7 +63,7 @@ namespace Hospital.Services
                 Data = vmList,
                 TotalItems = totalCount,
                 PageNumber = pageNumber,
-                PageSize = pageSize
+                PageSize = pageSize 
             };
         }
 
@@ -121,6 +121,54 @@ namespace Hospital.Services
                 PageNumber = pageNumber,
                 PageSize = pageSize
             };
+        }
+
+        public ApplicationUserViewModel GetById(string id)
+        {
+            var repo = _unitofwork.GetRepository<ApplicationUser>();
+            var user = repo.GetAll().FirstOrDefault(x => x.Id == id);
+            if (user == null)
+                return null;
+            return new ApplicationUserViewModel(user);
+        }
+
+        public void CreateUser(ApplicationUserViewModel model)
+        {
+            var repo = _unitofwork.GetRepository<ApplicationUser>();
+            var user = model.ConvertViewModelToModel(model);
+            repo.Add(user);
+            _unitofwork.Save();
+        }
+
+        public void UpdateUser(ApplicationUserViewModel model)
+        {
+            var repo = _unitofwork.GetRepository<ApplicationUser>();
+            var user = repo.GetAll().FirstOrDefault(x => x.Id == model.Id);
+            if (user != null)
+            {
+              
+                user.Name = model.Name;
+                user.Email = model.Email;
+                user.UserName = model.UserName;
+                user.City = model.City;
+                user.Gender = model.Gender;
+                user.IsDoctor = model.IsDoctor;
+                user.Specialist = model.Specialist;              
+
+                repo.Update(user);
+                _unitofwork.Save();
+            }
+        }
+
+        public void DeleteUser(string id)
+        {
+            var repo = _unitofwork.GetRepository<ApplicationUser>();
+            var user = repo.GetAll().FirstOrDefault(x => x.Id == id);
+            if (user != null)
+            {
+                repo.Delete(user);
+                _unitofwork.Save();
+            }
         }
     }
 }

@@ -64,8 +64,48 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9vbXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Admin/Views/User/AllDoctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxBbGxEb2N0b3JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Admin/Views/User/AllPatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxBbGxQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Admin/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Admin/Views/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Admin/Views/User/DoctorFind.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxEb2N0b3JGaW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Admin/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Admin/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Doctor/Views/Doctors/AddTiming.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yXFZpZXdzXERvY3RvcnNcQWRkVGltaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Doctor/Views/Doctors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yXFZpZXdzXERvY3RvcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Doctor/Views/Doctors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yXFZpZXdzXERvY3RvcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Doctor/Views/Doctors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yXFZpZXdzXERvY3RvcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/BulkyWebTamim/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/AccessDenied.cshtml]

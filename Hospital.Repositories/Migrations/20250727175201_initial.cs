@@ -31,8 +31,8 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -45,11 +45,11 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PinCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Country = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PinCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -62,9 +62,9 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PolicyNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StartDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EndDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    PolicyNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StartDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EndDate = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -77,10 +77,10 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Cost = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Cost = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -93,10 +93,10 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Company = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Company = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -129,15 +129,18 @@ namespace Hospital.Repositories.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Gender = table.Column<int>(type: "int", nullable: false),
-                    Nationality = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DOB = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Specialist = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsDoctor = table.Column<bool>(type: "bit", nullable: false),
-                    PictureUri = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DepartmentId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Gender = table.Column<int>(type: "int", nullable: true),
+                    Nationality = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Mobile = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DOB = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Specialist = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsDoctor = table.Column<bool>(type: "bit", nullable: true),
+                    PictureUri = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DepartmentId = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -160,8 +163,7 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_AspNetUsers_Departments_DepartmentId",
                         column: x => x.DepartmentId,
                         principalTable: "Departments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -171,8 +173,8 @@ namespace Hospital.Repositories.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     HospitalId = table.Column<int>(type: "int", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -192,8 +194,8 @@ namespace Hospital.Repositories.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoomNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     HospitalId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -213,13 +215,13 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SupplierId = table.Column<int>(type: "int", nullable: false),
-                    MedicineId = table.Column<int>(type: "int", nullable: false),
-                    Company = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    ProductionDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ExpireDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Country = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    SupplierId = table.Column<int>(type: "int", nullable: true),
+                    MedicineId = table.Column<int>(type: "int", nullable: true),
+                    Company = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Quantity = table.Column<int>(type: "int", nullable: true),
+                    ProductionDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ExpireDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -228,14 +230,12 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_MedicineReports_Medicines_MedicineId",
                         column: x => x.MedicineId,
                         principalTable: "Medicines",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_MedicineReports_Suppliers_SupplierId",
                         column: x => x.SupplierId,
                         principalTable: "Suppliers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -244,12 +244,12 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Number = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Number = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -264,8 +264,7 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_Appointments_AspNetUsers_PatientId",
                         column: x => x.PatientId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -359,18 +358,18 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BillNumber = table.Column<int>(type: "int", nullable: false),
-                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    InsuranceId = table.Column<int>(type: "int", nullable: false),
-                    DoctorCharge = table.Column<int>(type: "int", nullable: false),
-                    MedicineCharge = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    RoomCharge = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    OperationCharge = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    NoOfDays = table.Column<int>(type: "int", nullable: false),
-                    NUrsingCharge = table.Column<int>(type: "int", nullable: false),
-                    LabCharge = table.Column<int>(type: "int", nullable: false),
-                    Advance = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    TotalBill = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    BillNumber = table.Column<int>(type: "int", nullable: true),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    InsuranceId = table.Column<int>(type: "int", nullable: true),
+                    DoctorCharge = table.Column<int>(type: "int", nullable: true),
+                    MedicineCharge = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    RoomCharge = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    OperationCharge = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    NoOfDays = table.Column<int>(type: "int", nullable: true),
+                    NUrsingCharge = table.Column<int>(type: "int", nullable: true),
+                    LabCharge = table.Column<int>(type: "int", nullable: true),
+                    Advance = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    TotalBill = table.Column<decimal>(type: "decimal(18,2)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -379,14 +378,12 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_Bills_AspNetUsers_PatientId",
                         column: x => x.PatientId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Bills_Insurances_InsuranceId",
                         column: x => x.InsuranceId,
                         principalTable: "Insurances",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -395,15 +392,15 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    LabNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    TestType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TestCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Weight = table.Column<int>(type: "int", nullable: false),
-                    Height = table.Column<int>(type: "int", nullable: false),
-                    BloodPressure = table.Column<int>(type: "int", nullable: false),
-                    Temperature = table.Column<int>(type: "int", nullable: false),
-                    TestResult = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    LabNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    TestType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TestCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Weight = table.Column<int>(type: "int", nullable: true),
+                    Height = table.Column<int>(type: "int", nullable: true),
+                    BloodPressure = table.Column<int>(type: "int", nullable: true),
+                    Temperature = table.Column<int>(type: "int", nullable: true),
+                    TestResult = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -412,8 +409,7 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_Labs_AspNetUsers_PatientId",
                         column: x => x.PatientId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -422,9 +418,9 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Diagnose = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Diagnose = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -449,13 +445,13 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    EmployeeIdId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    NetSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    HourlySalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    BonusSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Compensation = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    AccountNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    EmployeeIdId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    NetSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    HourlySalary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    BonusSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Compensation = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    AccountNumber = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -464,8 +460,33 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_Payrolls_AspNetUsers_EmployeeIdId",
                         column: x => x.EmployeeIdId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Timing",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DoctorId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DoctorId1 = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    MorningShiftStartTime = table.Column<int>(type: "int", nullable: true),
+                    MorningShiftEndTime = table.Column<int>(type: "int", nullable: true),
+                    AfternoonShiftStartTime = table.Column<int>(type: "int", nullable: true),
+                    AfternoonShiftEndTime = table.Column<int>(type: "int", nullable: true),
+                    Duration = table.Column<int>(type: "int", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Timing", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Timing_AspNetUsers_DoctorId1",
+                        column: x => x.DoctorId1,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -474,10 +495,10 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    LabId = table.Column<int>(type: "int", nullable: false),
-                    BillId = table.Column<int>(type: "int", nullable: false),
-                    TestCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    LabId = table.Column<int>(type: "int", nullable: true),
+                    BillId = table.Column<int>(type: "int", nullable: true),
+                    TestCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -502,8 +523,8 @@ namespace Hospital.Repositories.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    MedicineId = table.Column<int>(type: "int", nullable: false),
-                    PatientReportId = table.Column<int>(type: "int", nullable: false)
+                    MedicineId = table.Column<int>(type: "int", nullable: true),
+                    PatientReportId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -512,14 +533,12 @@ namespace Hospital.Repositories.Migrations
                         name: "FK_PrescribedMedicines_Medicines_MedicineId",
                         column: x => x.MedicineId,
                         principalTable: "Medicines",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_PrescribedMedicines_PatientReports_PatientReportId",
                         column: x => x.PatientReportId,
                         principalTable: "PatientReports",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -645,6 +664,11 @@ namespace Hospital.Repositories.Migrations
                 name: "IX_TestPrices_LabId",
                 table: "TestPrices",
                 column: "LabId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Timing_DoctorId1",
+                table: "Timing",
+                column: "DoctorId1");
         }
 
         /// <inheritdoc />
@@ -685,6 +709,9 @@ namespace Hospital.Repositories.Migrations
 
             migrationBuilder.DropTable(
                 name: "TestPrices");
+
+            migrationBuilder.DropTable(
+                name: "Timing");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

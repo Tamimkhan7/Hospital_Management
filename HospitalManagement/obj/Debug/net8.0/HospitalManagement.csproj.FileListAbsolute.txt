@@ -258,7 +258,6 @@ D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\Hospital
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.AssemblyInfoInputs.cache
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.AssemblyInfo.cs
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.csproj.CoreCompileInputs.cache
-D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.MvcApplicationPartsAssemblyInfo.cs
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.MvcApplicationPartsAssemblyInfo.cache
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.RazorAssemblyInfo.cache
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.RazorAssemblyInfo.cs
@@ -277,3 +276,11 @@ D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\refint\H
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.pdb
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.genruntimeconfig.cache
 D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\ref\HospitalManagement.dll
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Web.Mvc.dll
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Web.Razor.dll
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Web.Helpers.dll
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Web.WebPages.dll
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
+D:\BulkyWebTamim\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.MvcApplicationPartsAssemblyInfo.cs

@@ -18,7 +18,7 @@ namespace Hospital.ViewModels
             Id = model.Id;
             Email = model.Email;
             Phone = model.Phone;
-            HospitalInfoId = model.HospitalId; // ✅ map properly from Contact
+            HospitalInfoId = model.HospitalId; //map properly from Contact
         }
 
         public Contact ConvertViewModel(ContactViewModel model)
@@ -28,7 +28,7 @@ namespace Hospital.ViewModels
                 Id = model.Id,
                 Email = model.Email,
                 Phone = model.Phone,
-                HospitalId = model.HospitalInfoId // ✅ map back
+                HospitalId = model.HospitalInfoId // map back
             };
         }
     }

@@ -1,0 +1,48 @@
+﻿@model Hospital.ViewModels.TimingViewModel
+
+@{
+    ViewData["Title"] = "Add Timing";
+}
+
+<h2>Add Timing</h2>
+
+<form asp-action="AddTiming" method="post">
+    <div class="form-group mb-3 d-none">
+        <input asp-for="Doctor" class="form-control" />
+        <span asp-validation-for="Doctor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="SheduleDate" class="form-label"></label>
+        <input asp-for="SheduleDate" class="form-control" />
+        <span asp-validation-for="SheduleDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Status" class="form-label"></label>
+        <select asp-for="Status" asp-items="Html.GetEnumSelectList<Hospital.Model.Status>()" class="form-control"></select>
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="MorningShiftStartTime" class="form-label">Morning Shift Start</label>
+        <select asp-for="MorningShiftStartTime" asp-items="ViewBag.morningStart" class="form-control"></select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="MorningShiftEndTime" class="form-label">Morning Shift End</label>
+        <select asp-for="MorningShiftEndTime" asp-items="ViewBag.morningEnd" class="form-control"></select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="AfternoonShiftStartTime" class="form-label">Afternoon Shift Start</label>
+        <select asp-for="AfternoonShiftStartTime" asp-items="ViewBag.evenStart" class="form-control"></select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="AfternoonShiftEndTime" class="form-label">Afternoon Shift End</label>
+        <select asp-for="AfternoonShiftEndTime" asp-items="ViewBag.evenEnd" class="form-control"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -14,6 +14,10 @@ namespace Hospital.Services
         PagedResult<ApplicationUserViewModel> GetAll(int pageNumber, int pageSize);
         PagedResult<ApplicationUserViewModel> GetAllDoctors(int pageNumber, int pageSize);
         PagedResult<ApplicationUserViewModel> GetAllPatient(int pageNumber, int pageSize);
-        PagedResult<ApplicationUserViewModel> SearchDoctor(int pageNumber, int pageSize, string Specility=null);
+        PagedResult<ApplicationUserViewModel> SearchDoctor(int pageNumber, int pageSize, string Specility= null);
+        ApplicationUserViewModel GetById(string id);
+        void CreateUser(ApplicationUserViewModel model);
+        void UpdateUser(ApplicationUserViewModel model);
+        void DeleteUser(string id);
     }
 }

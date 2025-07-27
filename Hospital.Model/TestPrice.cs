@@ -4,13 +4,13 @@
     {
         public int Id { get; set; }
 
-        public int LabId { get; set; }
-        public Lab Lab { get; set; }
+        public int? LabId { get; set; }
+        public Lab? Lab { get; set; }
 
-        public int BillId { get; set; }
-        public Bill Bill { get; set; }
+        public int? BillId { get; set; }
+        public Bill? Bill { get; set; }
 
-        public string TestCode { get; set; }
-        public decimal Price { get; set; }
+        public string? TestCode { get; set; }
+        public decimal? Price { get; set; }
     }
 }

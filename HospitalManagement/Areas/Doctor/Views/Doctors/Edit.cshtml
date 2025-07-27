@@ -1,0 +1,69 @@
+﻿@model Hospital.ViewModels.TimingViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SheduleDate" class="control-label"></label>
+                <input asp-for="SheduleDate" class="form-control" />
+                <span asp-validation-for="SheduleDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MorningShiftStartTime" class="control-label"></label>
+                <input asp-for="MorningShiftStartTime" class="form-control" />
+                <span asp-validation-for="MorningShiftStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MorningShiftEndTime" class="control-label"></label>
+                <input asp-for="MorningShiftEndTime" class="form-control" />
+                <span asp-validation-for="MorningShiftEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AfternoonShiftStartTime" class="control-label"></label>
+                <input asp-for="AfternoonShiftStartTime" class="form-control" />
+                <span asp-validation-for="AfternoonShiftStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AfternoonShiftEndTime" class="control-label"></label>
+                <input asp-for="AfternoonShiftEndTime" class="form-control" />
+                <span asp-validation-for="AfternoonShiftEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DoctorId" class="control-label"></label>
+                <input asp-for="DoctorId" class="form-control" />
+                <span asp-validation-for="DoctorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

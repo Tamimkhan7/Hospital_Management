@@ -1,12 +1,15 @@
 ﻿using Hospital.Model;
 using Hospital.Services;
+using Hospital.Utilities;
 using Hospital.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalManagement.Areas.Admin.Controllers
 {
 
-    [Area("admin")]
+    [Area("admin")]    
+    [Authorize]
     public class RoomsController : Controller
     {
 
@@ -24,6 +27,7 @@ namespace HospitalManagement.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = WebSiteRoles.WebSite_Admin)]
         public IActionResult Edit(int id)
         {
             var viewModel = _Room.GetRoomById(id);
@@ -31,6 +35,7 @@ namespace HospitalManagement.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = WebSiteRoles.WebSite_Admin)]
 
         public IActionResult Edit(RoomViewModel vm)
         {
@@ -39,6 +44,7 @@ namespace HospitalManagement.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = WebSiteRoles.WebSite_Admin)]
 
         public IActionResult Create()
         {
@@ -46,13 +52,14 @@ namespace HospitalManagement.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = WebSiteRoles.WebSite_Admin)]
 
         public IActionResult Create(RoomViewModel vm)
         {
             _Room.InsertRoom(vm);
             return RedirectToAction("Index");
         }
-
+        [Authorize(Roles = WebSiteRoles.WebSite_Admin)]
         public IActionResult Delete(int id)
         {
             _Room.DeleteRoom(id);

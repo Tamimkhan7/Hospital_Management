@@ -1,5 +1,6 @@
 ﻿using cloudscribe.Pagination.Models;
 using Hospital.ViewModels;
+using System.Collections.Generic;
 
 namespace Hospital.Services
 {
@@ -10,5 +11,8 @@ namespace Hospital.Services
         void InsertContact(ContactViewModel contact);
         void UpdateContact(ContactViewModel contact);
         void DeleteContact(int id);
+
+        // ✅ FIXED RETURN TYPE
+        IEnumerable<HospitalInfoViewModel> GetHospitalInfos();
     }
 }

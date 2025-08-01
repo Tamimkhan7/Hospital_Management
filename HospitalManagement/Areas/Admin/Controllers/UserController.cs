@@ -1,10 +1,14 @@
 ﻿using Hospital.Services;
+using Hospital.Utilities;
 using Hospital.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace HospitalManagement.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize]
     public class UserController : Controller
     {
         private readonly IApplicationUserService _userService;
@@ -13,7 +17,7 @@ namespace HospitalManagement.Areas.Admin.Controllers
         {
             _userService = userService;
         }
-
+        [Authorize(Roles = WebSiteRoles.WebSite_Admin)]
         public IActionResult Index(int pageNumber = 1, int pageSize = 10)
         {
             var model = _userService.GetAll(pageNumber, pageSize);
@@ -38,16 +42,18 @@ namespace HospitalManagement.Areas.Admin.Controllers
             return View(model);
         }
 
-        // CREATE GET
+
         [HttpGet]
+        [Authorize(Roles = WebSiteRoles.WebSite_Admin)]
         public IActionResult Create()
         {
             return View();
         }
 
-        // CREATE POST
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = WebSiteRoles.WebSite_Admin)]
         public IActionResult Create(ApplicationUserViewModel model)
         {
             if (ModelState.IsValid)
@@ -57,9 +63,9 @@ namespace HospitalManagement.Areas.Admin.Controllers
             }
             return View(model);
         }
-
-        // EDIT GET
+   
         [HttpGet]
+        [Authorize(Roles = $"{WebSiteRoles.WebSite_Admin},{WebSiteRoles.WebSite_Doctor},{WebSiteRoles.WebSite_Patient}")]
         public IActionResult Edit(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -69,24 +75,37 @@ namespace HospitalManagement.Areas.Admin.Controllers
             if (user == null)
                 return NotFound();
 
+            if (User.IsInRole(WebSiteRoles.WebSite_Doctor) || User.IsInRole(WebSiteRoles.WebSite_Patient))
+            {
+                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (currentUserId != id) return Forbid();
+            }
+
             return View(user);
         }
-
-        // EDIT POST
+     
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = $"{WebSiteRoles.WebSite_Admin},{WebSiteRoles.WebSite_Doctor},{WebSiteRoles.WebSite_Patient}")]
         public IActionResult Edit(ApplicationUserViewModel model)
         {
             if (ModelState.IsValid)
             {
-                _userService.UpdateUser(model);
+                if (User.IsInRole(WebSiteRoles.WebSite_Doctor) || User.IsInRole(WebSiteRoles.WebSite_Patient))
+                {
+                    var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    if (currentUserId != model.Id)
+                        return Forbid();
+                }
+
+                _userService.UpdateUser(model); 
                 return RedirectToAction(nameof(Index));
             }
+
             return View(model);
         }
-
-        // DELETE GET (Confirm delete page optional)
         [HttpGet]
+        [Authorize(Roles = $"{WebSiteRoles.WebSite_Admin},{WebSiteRoles.WebSite_Doctor},{WebSiteRoles.WebSite_Patient}")]
         public IActionResult Delete(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -96,15 +115,31 @@ namespace HospitalManagement.Areas.Admin.Controllers
             if (user == null)
                 return NotFound();
 
+            if (User.IsInRole(WebSiteRoles.WebSite_Doctor) || User.IsInRole(WebSiteRoles.WebSite_Patient))
+            {
+                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (currentUserId != id) return Forbid();
+            }
+
             return View(user);
         }
-
-        // DELETE POST
+    
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = $"{WebSiteRoles.WebSite_Admin},{WebSiteRoles.WebSite_Doctor},{WebSiteRoles.WebSite_Patient}")]
         public IActionResult DeleteConfirmed(string id)
         {
+            if (User.IsInRole(WebSiteRoles.WebSite_Doctor) || User.IsInRole(WebSiteRoles.WebSite_Patient))
+            {
+                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (currentUserId != id) return Forbid();
+            }
+
             _userService.DeleteUser(id);
+
+            if (!User.IsInRole(WebSiteRoles.WebSite_Admin))
+                return RedirectToAction("Logout", "Account", new { area = "" });
+
             return RedirectToAction(nameof(Index));
         }
     }

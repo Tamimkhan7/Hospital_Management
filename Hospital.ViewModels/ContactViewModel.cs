@@ -8,6 +8,10 @@ namespace Hospital.ViewModels
         public string Email { get; set; }
         public string Phone { get; set; }
         public int HospitalInfoId { get; set; }
+        public string Name { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+
 
         public ContactViewModel()
         {
@@ -18,17 +22,24 @@ namespace Hospital.ViewModels
             Id = model.Id;
             Email = model.Email;
             Phone = model.Phone;
-            HospitalInfoId = model.HospitalId; //map properly from Contact
+            HospitalInfoId = model.HospitalId;
+      
+            if(model.Hospital != null)
+            {
+                Name = model.Hospital.Name;
+                City = model.Hospital.City;
+                Country = model.Hospital.Country;
+            }
         }
 
-        public Contact ConvertViewModel(ContactViewModel model)
+        public Contact ConvertViewModel()
         {
             return new Contact
             {
-                Id = model.Id,
-                Email = model.Email,
-                Phone = model.Phone,
-                HospitalId = model.HospitalInfoId // map back
+                Id = Id,
+                HospitalId = HospitalInfoId,
+                Email = Email,
+                Phone = Phone
             };
         }
     }

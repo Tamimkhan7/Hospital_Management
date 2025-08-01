@@ -17,10 +17,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 //builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 //    .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
+
 
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
@@ -57,7 +58,6 @@ app.MapControllerRoute(
      pattern: "{area=admin}/{controller=Hospitals}/{action=Index}/{id?}");
     //pattern: "{controller=Home}/{action=Index}");
 
-app.Run();
 
 void SeedDatabase()
 {
@@ -65,3 +65,4 @@ void SeedDatabase()
     var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
     dbInitializer.Initialize();
 }
+app.Run();

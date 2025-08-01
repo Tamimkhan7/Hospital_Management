@@ -2,6 +2,7 @@
 using Hospital.Repositories.Interfaces;
 using cloudscribe.Pagination.Models;
 using Hospital.ViewModels;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Hospital.Services
@@ -29,20 +30,33 @@ namespace Hospital.Services
         public PagedResult<ContactViewModel> GetAll(int pageNumber, int pageSize)
         {
             var repo = _unitOfWork.GetRepository<Contact>();
-            int totalCount = repo.GetAll().Count();
+            var hospitalRepo = _unitOfWork.GetRepository<HospitalInfo>();
 
-            var modelList = repo.GetAll()
-                                .Skip((pageNumber - 1) * pageSize)
-                                .Take(pageSize)
-                                .ToList();
+            var allContacts = repo.GetAll().ToList();
+            var totalCount = allContacts.Count;
 
-            var vmList = modelList
-                         .Select(x => new ContactViewModel(x))
-                         .ToList();
+            var pagedContacts = allContacts
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            var contactVMs = pagedContacts.Select(contact =>
+            {
+                var vm = new ContactViewModel(contact);
+                var hospital = hospitalRepo.GetById(contact.HospitalId);
+                if (hospital != null)
+                {
+                    vm.Name = hospital.Name;
+                    vm.City = hospital.City;
+                    vm.Country = hospital.Country;
+                    vm.HospitalInfoId = hospital.Id;
+                }
+                return vm;
+            }).ToList();
 
             return new PagedResult<ContactViewModel>
             {
-                Data = vmList,
+                Data = contactVMs,
                 TotalItems = totalCount,
                 PageNumber = pageNumber,
                 PageSize = pageSize
@@ -52,33 +66,59 @@ namespace Hospital.Services
         public ContactViewModel GetContactById(int contactId)
         {
             var repo = _unitOfWork.GetRepository<Contact>();
-            var model = repo.GetById(contactId);
-            return model != null ? new ContactViewModel(model) : null;
+            var hospitalRepo = _unitOfWork.GetRepository<HospitalInfo>();
+
+            var contact = repo.GetById(contactId);
+            if (contact == null) return null;
+
+            var vm = new ContactViewModel(contact);
+            var hospital = hospitalRepo.GetById(contact.HospitalId);
+            if (hospital != null)
+            {
+                vm.Name = hospital.Name;
+                vm.City = hospital.City;
+                vm.Country = hospital.Country;
+                vm.HospitalInfoId = hospital.Id;
+            }
+
+            return vm;
         }
 
-        public void InsertContact(ContactViewModel contact)
+        public void InsertContact(ContactViewModel vm)
         {
             var repo = _unitOfWork.GetRepository<Contact>();
-            var model = new ContactViewModel().ConvertViewModel(contact);
+            var model = vm.ConvertViewModel();
             repo.Add(model);
             _unitOfWork.Save();
         }
 
-        public void UpdateContact(ContactViewModel contact)
+        public void UpdateContact(ContactViewModel vm)
         {
             var repo = _unitOfWork.GetRepository<Contact>();
-            var updated = new ContactViewModel().ConvertViewModel(contact);
+            var existing = repo.GetById(vm.Id);
 
-            var existing = repo.GetById(updated.Id);
             if (existing != null)
             {
-                existing.Phone = updated.Phone;
-                existing.Email = updated.Email;
-                existing.HospitalId = updated.HospitalId;
+                existing.Phone = vm.Phone;
+                existing.Email = vm.Email;
+                existing.HospitalId = vm.HospitalInfoId;
 
                 repo.Update(existing);
                 _unitOfWork.Save();
             }
+        }
+
+        // ✅ FIXED METHOD BELOW
+        public IEnumerable<HospitalInfoViewModel> GetHospitalInfos()
+        {
+            var hospitalRepo = _unitOfWork.GetRepository<HospitalInfo>();
+            var hospitals = hospitalRepo.GetAll().ToList();
+
+            return hospitals.Select(h => new HospitalInfoViewModel
+            {
+                Id = h.Id,
+                Name = h.Name
+            });
         }
     }
 }

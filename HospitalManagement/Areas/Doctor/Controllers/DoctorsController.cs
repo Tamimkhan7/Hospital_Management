@@ -1,6 +1,8 @@
 ﻿using Hospital.Model;
 using Hospital.Services;
+using Hospital.Utilities;
 using Hospital.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Claims;
@@ -8,6 +10,7 @@ using System.Security.Claims;
 namespace HospitalManagement.Areas.Doctor.Controllers
 {
     [Area("Doctor")]
+    //[Authorize(Roles = WebSiteRoles.WebSite_Doctor)]
     public class DoctorsController : Controller
     {
         private readonly IDoctorService _doctorService;
